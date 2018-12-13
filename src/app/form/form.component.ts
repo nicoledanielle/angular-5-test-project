@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  @ViewChild('myDatepicker') datePicker: MatDatepicker<Date>;
+
   constructor() { }
 
   ngOnInit() {
+    // this.datePicker.open();
   }
 
 }
