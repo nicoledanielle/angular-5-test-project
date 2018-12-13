@@ -1,7 +1,5 @@
 <div [style.width]="'50%'">
-    <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <input [matDatepicker]="picker" placeholder="Choose a date" [style.display]="'none'">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
 </div>
