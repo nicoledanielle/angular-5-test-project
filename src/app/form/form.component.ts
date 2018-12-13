@@ -8,12 +8,24 @@ import { MatDatepicker } from '@angular/material/datepicker';
 })
 export class FormComponent implements OnInit {
 
-  @ViewChild('myDatepicker') datePicker: MatDatepicker<Date>;
+  @ViewChild('picker') datePicker: MatDatepicker<Date>;
+  console: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.console = console;
     // this.datePicker.open();
+  }
+
+  toggleDatepicker() {
+    if(this.datePicker.opened) {
+      this.datePicker.close();
+    }
+    else {
+      this.datePicker.open();
+    }
+    
   }
 
 }

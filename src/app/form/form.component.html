@@ -1,5 +1,5 @@
 <div [style.width]="'50%'">
-        <input [matDatepicker]="picker" placeholder="Choose a date" [style.display]="'none'">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+    <a [style.position]="'absolute'" [style.right]="'0'" (click)="toggleDatepicker()">{{ picker.opened }}</a>
+    <input (dateChange)="console.log($event)" [matDatepicker]="picker" placeholder="Choose a date" [style.display]="'none'">
+    <mat-datepicker (dateChange)="console.log($event)" #picker></mat-datepicker>
 </div>
